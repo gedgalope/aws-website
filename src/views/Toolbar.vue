@@ -1,6 +1,6 @@
 <template>
   <div class="page-toolbar">
-    <v-toolbar>
+    <v-toolbar dark>
       <v-toolbar-title class="headline text-uppercase">
         <span>TAWS</span>
         <span class="font-weight-light">Logo</span>
@@ -8,11 +8,26 @@
       <v-spacer></v-spacer>
 
       <span class="hidden-xs-only">
-        <v-tabs color="transparent">
-          <v-tab optional exact large class="vtab text-capitalize">Home</v-tab>
-          <v-tab optional exact large class="vtab text-capitalize">Services</v-tab>
-          <v-tab optional exact large class="vtab text-capitalize">About Us</v-tab>
-          <v-tab optional exact large class="vtab text-capitalize">Contact Us</v-tab>
+        <v-tabs>
+          <v-menu open-on-click bottom persistent offset-y dark>
+            <template v-slot:activator="{ on }">
+              <!-- <v-btn color="primary" dark v-on="on">Dropdown</v-btn> -->
+              <v-tab optional exact large class="vtab text-capitalize" v-on="on">Home
+                <v-icon right x-small>mdi-chevron-down</v-icon>
+              </v-tab>
+            </template>
+            <v-list>
+              <v-list-item replace to="/">
+                <v-list-item-title>AWS Home</v-list-item-title>
+              </v-list-item>
+              <v-list-item replace to="/MO">
+                <v-list-item-title>Manila Observatory</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          <!-- <v-tab optional exact large class="vtab text-capitalize" replace to="/">Home</v-tab> -->
+          <v-tab optional exact large class="vtab text-capitalize" replace to="/weather">Weather</v-tab>
+          <v-tab optional exact large class="vtab text-capitalize" replace to="/about">About Us</v-tab>
         </v-tabs>
       </span>
       <span class="hidden-sm-and-up">
@@ -32,7 +47,7 @@
             <v-list-item @click="testfunc()">
               <v-list-item-title>Contact Us</v-list-item-title>
             </v-list-item>
-          </v-list> -->
+          </v-list>-->
         </v-menu>
       </span>
     </v-toolbar>
@@ -42,8 +57,8 @@
 <script>
 export default {
   name: "page-toolbar",
-  methods:{
-    testfunc(){
+  methods: {
+    testfunc() {
       //do nothing
     }
   }

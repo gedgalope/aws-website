@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import BulletinView from './views/Bulletin'
+import MOHome from './views/MOHome'
+import Weather from './views/Weather'
 
 Vue.use(Router)
 
@@ -26,6 +28,15 @@ const router = new Router({
       path:'/bulletin',
       name:'bulletin',
       component:BulletinView
+    },
+    {
+      path:'/MO',
+      name:'MOHome',
+      component:MOHome
+    },{
+      path:'/weather',
+      name:'Weather',
+      component:Weather
     }
   ]
 })
