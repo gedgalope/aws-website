@@ -1,9 +1,5 @@
 <template>
-  <!-- <v-container> -->
-  <!-- <div class="canvass"> -->
     <line-chart :chart-data="datacollection" :symbol="dataSymbol" ></line-chart>
-  <!-- </div> -->
-  <!-- </v-container> -->
 </template>
 
 <script>

@@ -6,9 +6,10 @@ import store from './store/index'
 import openlayers from './plugins/openlayers'
 import '@mdi/font/css/materialdesignicons.css'
 import vueChart from 'vue-chartjs'
+import Watermark from 'chartjs-plugin-watermark'
 
 Vue.config.productionTip = false
-Vue.use(vueChart)
+Vue.use(vueChart,Watermark)
 
 new Vue({
   router,

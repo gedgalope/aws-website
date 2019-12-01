@@ -1,4 +1,8 @@
 <script>
+var image = new Image();
+image.src =
+  "http://www.addu.edu.ph/wp-content/uploads/2015/05/00-OFFICIAL-AdDU-Seal-500px-300x300.jpg";
+
 import { HorizontalBar, mixins } from "vue-chartjs";
 const { reactiveProp } = mixins;
 
@@ -7,8 +11,8 @@ export default {
   data() {
     return {
       options: {
-        legend:{
-          display:false,
+        legend: {
+          display: false
         },
         layout: {
           padding: {
@@ -25,9 +29,9 @@ export default {
           xAxes: [
             {
               display: true,
-              ticks:{
-                beginAtZero:true,
-                suggestedMax:this.maxValue
+              ticks: {
+                beginAtZero: true,
+                suggestedMax: this.maxValue
               }
             }
           ]
@@ -49,6 +53,16 @@ export default {
               return null;
             }
           }
+        },
+        watermark: {
+          image: image,
+          width: 150,
+          height: 150,
+          opacity: 0.2,
+          alignX: "middle",
+          alignY: "middle",
+          alignToChartArea: false,
+          position: "back"
         }
       }
     };
@@ -62,9 +76,9 @@ export default {
         return "";
       }
     },
-    maxValue:{
-      type:String,
-      default:()=>{
+    maxValue: {
+      type: String,
+      default: () => {
         return null;
       }
     }

@@ -16,12 +16,8 @@
                   <v-container v-on="on">Station: {{AWSDesc.address}}</v-container>
                 </template>
                 <v-container class="pa-0 ma-0">
-                  <v-row>
-                    Longitude:{{AWSDesc.coordinates[0]}}
-                  </v-row>
-                  <v-row>
-                    Latitude:{{AWSDesc.coordinates[1]}}
-                  </v-row>
+                  <v-row>Longitude:{{AWSDesc.coordinates[0]}}</v-row>
+                  <v-row>Latitude:{{AWSDesc.coordinates[1]}}</v-row>
                 </v-container>
               </v-tooltip>
             </v-row>
@@ -40,9 +36,10 @@
                   <v-container v-on="on" class="pl-3 ml-4 my-0 py-0">
                     <v-row>
                       <v-col cols="2" class="py-0 pr-0 text-center">
-                        <v-icon x-small>mdi-power-off</v-icon>
+                        <v-icon small color="success" v-if="sensor.installed">mdi-check-bold</v-icon>
+                        <v-icon small color="error" v-else>mdi-close</v-icon>
                       </v-col>
-                      <v-col cols="10" class="pl-0 py-0">{{sensor.name}}</v-col>
+                      <v-col cols="10" class="pl-0 py-0 subtitle-1 font-weight-bold">{{sensor.name}}</v-col>
                     </v-row>
                   </v-container>
                 </template>
@@ -81,12 +78,20 @@
 
 <script>
 import MapViewVue from "../utils/MapView.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, install } from "vuex";
 export default {
   name: "side-bar",
   data() {
     return {
-      zoom: 16
+      zoom: 16,
+      sensorSelection: [
+        "BMP 1500",
+        "SHT 15",
+        "Davis Tipping Bucket",
+        "Davis Anemometer",
+        "Davis Solar Irradiance",
+        "Apogee Pyranometer"
+      ]
     };
   },
   computed: {
@@ -115,7 +120,7 @@ export default {
   methods: {
     pushRoute() {
       this.$router.push("weather");
-    }
+    },
   },
   props: {
     selectedAWS: {

@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdi/font": "^4.4.95",
     "chart.js": "^2.9.2",
+    "chartjs-plugin-watermark": "^1.0.3",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-chartjs": "^3.5.0",

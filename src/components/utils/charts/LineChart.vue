@@ -2,22 +2,26 @@
 import { Line, mixins } from "vue-chartjs";
 const { reactiveProp } = mixins;
 
+var image = new Image();
+image.src =
+  "http://www.addu.edu.ph/wp-content/uploads/2015/05/00-OFFICIAL-AdDU-Seal-500px-300x300.jpg";
+
 export default {
   name: "line-chart",
   data() {
     return {
       options: {
-        legend:{
-          display:false
+        legend: {
+          display: false
         },
-        responsive:true,
+        responsive: true,
         maintainAspectRatio: false,
-        layout:{
-          padding:{
-            left:20,
-            right:20,
-            bottom:20,
-            top:0
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+            bottom: 20,
+            top: 0
           }
         },
         aspectRatio: 1.96,
@@ -25,13 +29,15 @@ export default {
           xAxes: [
             {
               display: false
-            },
-          ],
-          yAxes:[{
-            gridLines:{
-              display:true
             }
-          }]
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                display: true
+              }
+            }
+          ]
         },
         tooltips: {
           callbacks: {
@@ -51,6 +57,16 @@ export default {
               return `Time:  ${time}`;
             }
           }
+        },
+        watermark: {
+          image: image,
+          width: 300,
+          height: 300,
+          opacity: 0.2,
+          alignX: "middle",
+          alignY: "middle",
+          alignToChartArea: false,
+          position: "back"
         }
       }
     };
