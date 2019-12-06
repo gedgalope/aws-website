@@ -3,11 +3,11 @@
     <v-row>
       <template v-for="(member,index) in awsMembers">
         <v-col :key="index" xs="12" sm="12" md="4" lg="3" xl="3">
-          <v-card>
+          <v-card color="rgb(255,255,255,0.5)">
             <v-card-title>
-              <v-hover v-slot:default="{hover}" >
+              <v-hover v-slot:default="{hover}">
                 <v-container fluid>
-                  <v-row justify="center">
+                  <v-row justify="center" class="img-box">
                     <icon-handler
                       class="img-container"
                       viewBox="0 0 444.059 444.059"
@@ -33,7 +33,7 @@
                       <female-graduate-icon></female-graduate-icon>
                     </icon-handler>
                   </v-row>
-                  <v-row>
+                  <v-row class="img-box">
                     <v-img
                       class="img-container"
                       :src="member.imgURL"
@@ -47,7 +47,7 @@
             </v-card-title>
             <v-container>
               <v-row>
-                <v-container fluid class="text-center subtitle-1">{{member.name}}</v-container>
+                <v-container fluid class="text-center text-truncate title pt-0 mt-0">{{member.name}}</v-container>
               </v-row>
               <v-row>
                 <v-container fluid class="text-center subtitle-2 mb-4">{{member.position}}</v-container>
@@ -56,20 +56,32 @@
                 <v-divider vertical></v-divider>
                 <v-col class="pa-0 ma-0" align="center" cols="2">
                   <v-btn text icon color="#1877f2">
-                    <v-icon :disabled="member.social.fb === null" dmedium @click="pushSocial(member.social.fb,false)">mdi-facebook</v-icon>
+                    <v-icon
+                      :disabled="member.social.fb === null"
+                      dmedium
+                      @click="pushSocial(member.social.fb,false)"
+                    >mdi-facebook</v-icon>
                   </v-btn>
                 </v-col>
                 <v-divider vertical></v-divider>
                 <v-col class="pa-0 ma-0" align="center" cols="2">
                   <v-btn text icon color="#1da1f2">
-                    <v-icon :disabled="member.social.twitter === null" dmedium @click="pushSocial(member.social.twitter,false)">mdi-twitter</v-icon>
+                    <v-icon
+                      :disabled="member.social.twitter === null"
+                      dmedium
+                      @click="pushSocial(member.social.twitter,false)"
+                    >mdi-twitter</v-icon>
                   </v-btn>
                 </v-col>
                 <v-divider vertical></v-divider>
 
                 <v-col class="pa-0 ma-0" align="center" cols="2">
                   <v-btn text icon>
-                    <v-icon :disabled="member.social.email === null" dmedium @click="pushSocial(member.social.email,true)">mdi-email-box</v-icon>
+                    <v-icon
+                      :disabled="member.social.email === null"
+                      dmedium
+                      @click="pushSocial(member.social.email,true)"
+                    >mdi-email-box</v-icon>
                   </v-btn>
                 </v-col>
                 <v-divider vertical></v-divider>
@@ -106,10 +118,10 @@ export default {
       awsMembers: "data/getMembers"
     })
   },
-  methods:{
-    pushSocial(url,mail){
-      if(mail){
-        window.open(`mailto:${url}?subject=AWS Inquiries`)
+  methods: {
+    pushSocial(url, mail) {
+      if (mail) {
+        window.open(`mailto:${url}?subject=AWS Inquiries`);
       }
       window.open(url);
     }
@@ -118,8 +130,17 @@ export default {
 </script>
 
 <style scoped>
+.img-box {
+  overflow: hidden;
+  border-radius: 50%;
+}
 .img-container {
   border-radius: 50%;
-  background-color: #E3F2FD;
+  background-color: rgb(227, 242, 253,0.8);
+  transition: all 0.5s;
+}
+.img-container:hover, .img-container:focus {
+  transform: scale(1.1);
+  display: block;
 }
 </style>

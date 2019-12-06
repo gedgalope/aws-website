@@ -23,11 +23,13 @@
               <v-list-item replace to="/MO">
                 <v-list-item-title>Manila Observatory</v-list-item-title>
               </v-list-item>
+              <v-list-item replace to="/7Eleven">
+                <v-list-item-title>7Eleven</v-list-item-title>
+              </v-list-item>
             </v-list>
           </v-menu>
-          <!-- <v-tab optional exact large class="vtab text-capitalize" replace to="/">Home</v-tab> -->
           <v-tab optional exact large class="vtab text-capitalize" replace to="/weather">Weather</v-tab>
-          <v-tab optional exact large class="vtab text-capitalize" replace to="/about">About Us</v-tab>
+          <v-tab optional exact large class="vtab text-capitalize" replace to="/about/AWS">About Us</v-tab>
         </v-tabs>
       </span>
       <span class="hidden-sm-and-up">
