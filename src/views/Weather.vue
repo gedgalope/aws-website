@@ -5,7 +5,7 @@
         <v-container fluid>
           <v-row>
             <v-container fluid class="title pl-4 ml-4">
-              AWS Location
+              AWS <span class="hidden-xs-only"> Location</span>:
             </v-container>
           </v-row>
           <v-row>
@@ -25,7 +25,7 @@
         <v-container fluid>
           <v-row>
             <v-container fluid class="title pl-0 ml-0">
-              From Date:
+              From <span class="hidden-xs-only"> Date</span>:
             </v-container>
           </v-row>
           <v-row>
@@ -59,7 +59,7 @@
         <v-container fluid>
           <v-row>
             <v-container fluid class="title pl-0 ml-0">
-              To Date:
+              To <span class="hidden-xs-only"> Date</span>:
             </v-container>
           </v-row>
           <v-row>

@@ -1,17 +1,17 @@
 <template>
-  <v-container class="partners" fluid >
+  <v-container class="partners" fluid>
     <v-row>
-      <v-col cols="3">
+      <v-col xl="3" lg="3" md="3" sm="3">
         <v-img aspect-ratio="1" contain :src="AdDULogo" :height="partnerStyle"></v-img>
       </v-col>
-      <v-col cols="3">
+      <v-col xl="3" lg="3" md="3" sm="3">
         <v-img aspect-ratio="1" contain :src="apolloLogo" :height="partnerStyle"></v-img>
       </v-col>
-      <v-col cols="3">
+      <v-col xl="3" lg="3" md="3" sm="3">
         <v-img aspect-ratio="1" contain :src="CGOD" :height="partnerStyle"></v-img>
       </v-col>
-      <v-col aspect-ratio="1" cols="3">
-        <v-img contain :src="sevenEleven" :height="partnerStyle"></v-img>
+      <v-col xl="3" lg="3" md="3" sm="3">
+        <v-img aspect-ratio="1" contain :src="sevenEleven" :height="partnerStyle"></v-img>
       </v-col>
     </v-row>
   </v-container>
@@ -32,10 +32,10 @@ export default {
       sevenEleven: sevenEleven
     };
   },
-  props:{
-    partnerStyle:{
-      type:String,
-      default: ()=>{
+  props: {
+    partnerStyle: {
+      type: String,
+      default: () => {
         return null;
       }
     }

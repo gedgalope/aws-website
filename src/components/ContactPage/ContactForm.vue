@@ -2,7 +2,7 @@
   <v-container class="contact-form">
     <v-form ref="form" v-model="formValid">
       <v-row justify="center">
-        <v-col align="center" sm="12" md="5" lg="5" xl="5">
+        <v-col align="center" cols="12" sm="12" md="5" lg="5" xl="5">
           <v-text-field
             v-model="name"
             :rules="rules.nameRules"
@@ -12,12 +12,7 @@
             outlined
           ></v-text-field>
         </v-col>
-        <v-col class="hidden-xs-only" align="center" sm="12" md="5" lg="5" xl="5">
-          <v-text-field v-model="contact" name="contact" label="Affiliation/Organization:" outlined></v-text-field>
-        </v-col>
-      </v-row>
-      <v-row justify="center" class="hidden-sm-and-up">
-        <v-col class="hidden-sm-and-up" align="center" sm="12" md="5" lg="5" xl="5">
+        <v-col class="hidden-xs-only" cols="12" align="center" sm="12" md="5" lg="5" xl="5">
           <v-text-field v-model="contact" name="contact" label="Affiliation/Organization:" outlined></v-text-field>
         </v-col>
       </v-row>

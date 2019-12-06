@@ -93,7 +93,7 @@
         </v-container>
     </v-row>
     <v-row justify="center">
-      <v-col align="center" cols="4">
+      <v-col align="center" xl="4" lg="4" md="4" sm="8">
         <v-btn x-large color="primary" outlined block tile exact to="contact-us">
           <span class="display-1 text-capitalized">Contact us</span>
         </v-btn>
