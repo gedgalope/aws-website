@@ -25,8 +25,8 @@
         </v-container>
       </v-col>
     </v-row>
-    <v-row justify="center">
-      <v-icon small>mdi-copyright</v-icon>AdDU AWS - 2019
+    <v-row class="font-weight-light caption" justify="center">
+      AdDU AWS  <v-icon class="px-1" small>mdi-copyright</v-icon> 2019
     </v-row>
   </v-container>
 </template>

@@ -26,7 +26,7 @@
               <v-card>
                 <gauge-chart-handler
                   :awsData="awsData.data.windSpeed"
-                  data-symbol="km/h"
+                  data-symbol="kph"
                   data-label="Wind Speed"
                 ></gauge-chart-handler>
               </v-card>
@@ -133,7 +133,7 @@
         <v-card>
           <gauge-chart-handler
             :awsData="awsData.data.windSpeed"
-            data-symbol="km/h"
+            data-symbol="kph"
             data-label="Wind Speed"
           ></gauge-chart-handler>
         </v-card>

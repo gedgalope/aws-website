@@ -1,16 +1,16 @@
 <template>
   <v-container class="partners" fluid>
     <v-row>
-      <v-col xl="3" lg="3" md="3" sm="3">
+      <v-col xl="3" lg="3" md="3" sm="3" xs="6">
         <v-img aspect-ratio="1" contain :src="AdDULogo" :height="partnerStyle"></v-img>
       </v-col>
-      <v-col xl="3" lg="3" md="3" sm="3">
+      <v-col xl="3" lg="3" md="3" sm="3" xs="6">
         <v-img aspect-ratio="1" contain :src="apolloLogo" :height="partnerStyle"></v-img>
       </v-col>
-      <v-col xl="3" lg="3" md="3" sm="3">
+      <v-col xl="3" lg="3" md="3" sm="3" xs="6">
         <v-img aspect-ratio="1" contain :src="CGOD" :height="partnerStyle"></v-img>
       </v-col>
-      <v-col xl="3" lg="3" md="3" sm="3">
+      <v-col xl="3" lg="3" md="3" sm="3" xs="6">
         <v-img aspect-ratio="1" contain :src="sevenEleven" :height="partnerStyle"></v-img>
       </v-col>
     </v-row>
