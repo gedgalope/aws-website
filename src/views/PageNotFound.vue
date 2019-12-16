@@ -8,7 +8,7 @@
               <v-container
                 class="text-center display-3 text-uppercase font-weight-bold"
                 style="color"
-              >page not found</v-container>
+              >Page not found</v-container>
             </v-row>
           </v-container>
         </v-card>
@@ -23,7 +23,7 @@
           class="title font-weight-medium"
           align="center"
           cols="10"
-        >We can’t seem to find the page you’re looking for.</v-col>
+        >{{bodyMessage}}</v-col>
       </v-row>
       <!-- <v-row class="row-container" align="center" justify="center">
         <v-col class="col-container" xl="6" lg="8" md="8" sm="12">
@@ -78,6 +78,14 @@ export default {
     return {
       backgnd: backgnd
     };
+  },
+  props:{
+    bodyMessage:{
+      type:String,
+      default:()=>{
+        return "We can’t seem to find the page you’re looking for."
+      }
+    }
   },
   components: {
     "acid-rain-icon": AcidRain,

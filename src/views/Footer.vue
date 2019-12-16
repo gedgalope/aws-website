@@ -21,7 +21,7 @@
         <v-container class="hidden-md-and-up pa-0 ma-0">
           <v-row justify="center">aws-addu@gmail.com</v-row>
           <v-row justify="center">+639236916790 / (082)431 4495</v-row>
-          <v-row justify="center">Roxas Ave, Poblacion District, Davao City, 8000 Davao del Sur</v-row>
+          <v-row justify="center">Roxas Ave, Poblacion District, Davao City</v-row>
         </v-container>
       </v-col>
     </v-row>

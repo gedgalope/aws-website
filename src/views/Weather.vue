@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row>
-      <v-col xs="12" sm="12" md="3" lg="3" xl="3">
+      <v-col cols="12" sm="12" md="3" lg="3" xl="3">
         <v-container fluid>
           <v-row>
             <v-container fluid class="title pl-4 ml-4">
@@ -16,12 +16,12 @@
               item-value="location"
               v-model="selectedAddress"
               label="default: AWS Roxas"
-              prepend-icon="mdi-map-marker"
+              prepend-inner-icon="mdi-map-marker"
             ></v-select>
           </v-row>
         </v-container>
       </v-col>
-      <v-col xs="12" sm="12" md="2" lg="2" xl="2">
+      <v-col cols="6" sm="6" md="2" lg="2" xl="2">
         <v-container fluid>
           <v-row>
             <v-container fluid class="title pl-0 ml-0">
@@ -55,7 +55,7 @@
           </v-row>
         </v-container>
       </v-col>
-      <v-col xs="12" sm="12" md="2" lg="2" xl="2">
+      <v-col cols="6" sm="6" md="2" lg="2" xl="2">
         <v-container fluid>
           <v-row>
             <v-container fluid class="title pl-0 ml-0">
@@ -91,21 +91,20 @@
         </v-container>
       </v-col>
 
-      <v-col xs="12" sm="12" md="3" lg="3" xl="3">
-        <v-container fluid class="pt-4 mt-4">
-          <v-btn x-large rounded outlined color="primary" :disabled="getClickable">Get AWS Data</v-btn>
-        </v-container>
+      <v-col align-self="center" cols="12" sm="12" md="3" lg="3" xl="3">
+          <v-btn block x-large rounded outlined color="primary" :disabled="getClickable">Get AWS Data</v-btn>
       </v-col>
     </v-row>
     <v-row>
       <weather-table :dateFrom="from" :dateTo="to" :selected="selectedAddress"></weather-table>
     </v-row>
     <v-row>
-      <v-container fluid>
+      <v-col cols="12" sm="12" md="6" lg="5" xl="5" align-self="center">
         <v-dialog v-model="dialog" scrollable :overlay="true" transition="dialog-transition">
           <template v-slot:activator="{on}">
             <v-btn
               v-on="on"
+              block
               x-large
               rounded
               outlined
@@ -115,7 +114,7 @@
           </template>
           <weather-graph></weather-graph>
         </v-dialog>
-      </v-container>
+      </v-col>
     </v-row>
   </v-container>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="bulletin-view">
-    <v-container fluid>
+    <v-container fluid class="hidden-sm-and-down">
       <v-row no-gutters align-start>
         <v-col style="min-width:75%; min-height:100%">
           <bulletin-map></bulletin-map>
@@ -10,17 +10,22 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container>
+      <page-not-found bodyMessage="This page is only available for large viewports"></page-not-found>
+    </v-container>
   </div>
 </template>
 
 <script>
 import BulletinMap from "../components/BulletinPage/BulletinMap";
 import BulletinValuesVue from "../components/BulletinPage/BulletinValues.vue";
+import PageNotFoundVue from './PageNotFound.vue';
 export default {
   name: "bulletin-view",
   components: {
     "bulletin-map": BulletinMap,
-    "bulletin-values": BulletinValuesVue
+    "bulletin-values": BulletinValuesVue,
+    "page-not-found":PageNotFoundVue
   },
   computed: {
   },

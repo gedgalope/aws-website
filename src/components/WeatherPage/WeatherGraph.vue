@@ -3,7 +3,7 @@
     <v-card style="width:100% !important;">
       <v-container>
         <v-row>
-          <v-col cols="6">
+          <v-col cols="12" sm="6" md="6" lg="6" xl="6">
             <v-container fluid class="headline">
               <v-row>
                 <p>Parameter 1:</p>
@@ -18,7 +18,7 @@
               </v-row>
             </v-container>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" sm="6" md="6" lg="6" xl="6">
             <v-container fluid class="headline">
               <v-row>
                 <p>Parameter 2:</p>

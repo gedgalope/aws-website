@@ -5,12 +5,15 @@
         <v-card>
           <v-card-title>
             <v-container
-              class="display-1 font-weight-bold text-center"
+              class="display-1 font-weight-bold text-center hidden-xs-only"
+            >Automated Weather Station (AWS)</v-container>
+            <v-container
+              class="headline font-weight-bold text-center hidden-sm-and-up"
             >Automated Weather Station (AWS)</v-container>
           </v-card-title>
           <v-container>
             <v-row>
-              <v-container>
+              <v-container class="text-justify">
                 The Automated Weather Station (AWS) Project of the Ateneo de Davao University aims to contribute in increasing of adaptive capacities of communities. This can be done through data collection and analysis of data for future forecasting and modelling.
                 The long term over-all objective of the research is to create models and forecasts on climate patterns and changes of the city and its nearby communities which can be used as management tools in the future in terms of disaster risk reduction and climate change adaptation.
                 The data that will be collected from the study could be used for risk management and planning tools for watershed management and can be basis for future payment for environmental services proposals.
@@ -24,11 +27,11 @@
                 <v-container>
                   <v-row>
                     <v-container
-                      class="pa-0 ma-0"
+                      class="pa-0 ma-0 text-justify"
                     >There are four main components to consider in the design of the Automatic Weather Station.</v-container>
                   </v-row>
                   <v-row>
-                    <v-container class="pa-0 ma-0">
+                    <v-container class="pa-0 ma-0 text-justify">
                       <v-row>
                         <v-col cols="1">
                           <v-icon x-small class>mdi-record</v-icon>
@@ -40,7 +43,7 @@
                     </v-container>
                   </v-row>
                   <v-row>
-                    <v-container class="pa-0 ma-0">
+                    <v-container class="pa-0 ma-0 text-justify">
                       <v-row>
                         <v-col cols="1">
                           <v-icon x-small class>mdi-record</v-icon>
@@ -64,7 +67,7 @@
                     </v-container>
                   </v-row>-->
                   <v-row>
-                    <v-container class="pa-0 ma-0">
+                    <v-container class="pa-0 ma-0 text-justify">
                       <v-row>
                         <v-col cols="1">
                           <v-icon x-small class>mdi-record</v-icon>

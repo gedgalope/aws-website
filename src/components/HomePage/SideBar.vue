@@ -78,7 +78,7 @@
 
 <script>
 import MapViewVue from "../utils/MapView.vue";
-import { mapGetters, install } from "vuex";
+import { mapGetters} from "vuex";
 export default {
   name: "side-bar",
   data() {
