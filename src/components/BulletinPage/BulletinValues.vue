@@ -57,7 +57,7 @@
                               <v-col cols="6">
                                 <v-row>
                                   <v-col cols="12" class="text-center">
-                                    <span class="display-2">{{data.temp}}°C</span>
+                                    <span class="display-1">{{data.temp}}°C</span>
                                   </v-col>
                                   <v-col cols="12" class="text-center">
                                     <span class="title">{{data.rain}}mm</span>

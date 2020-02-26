@@ -2,7 +2,7 @@
   <div class="bulletin-view">
     <v-container fluid class="hidden-sm-and-down">
       <v-row no-gutters align-start>
-        <v-col style="min-width:75%; min-height:100%">
+        <v-col style="min-width:75%; height:100%">
           <bulletin-map></bulletin-map>
         </v-col>
         <v-col style="min-width:25%; min-height:100%">
@@ -10,7 +10,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container>
+    <v-container class="hidden-md-and-up">
       <page-not-found bodyMessage="This page is only available for large viewports"></page-not-found>
     </v-container>
   </div>

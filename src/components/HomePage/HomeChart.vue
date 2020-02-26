@@ -1,13 +1,34 @@
 <template>
   <v-container fluid class="home-chart pa-0 ma-0">
     <v-row class="pa-0 ma-0">
-      <v-col xs="12" sm="12" md="6" lg="7" xl="7">
+      <v-col class="" xs="12" sm="12" md="6" lg="7" xl="7">
         <v-card style="height:100% !important;" ref="tempCard">
           <v-card-title primary-title class="text-center">
             <v-container class="display-1">Temperature</v-container>
           </v-card-title>
-
-          <line-chart-handler :awsData="awsData.data.temperature" data-symbol="°C"></line-chart-handler>
+          <line-chart-handler
+            class="hidden-xs-only"
+            :awsData="awsData.data.temperature"
+            data-symbol="°C"
+          ></line-chart-handler>
+          <v-card-text class="hidden-sm-and-up text--primary pa-0">
+            <v-container class="">
+              <v-row class="px-2 py-4">
+                <v-divider></v-divider>
+              </v-row>
+              <v-row justify="center">
+                <v-col
+                  class="display-2"
+                  align="right"
+                  cols="8"
+                >{{currentTemp(awsData.data.temperature)}}</v-col>
+                <v-col class="display-2" align="left" cols="4">°C</v-col>
+              </v-row>
+              <v-row class="px-2 py-4">
+                <v-divider></v-divider>
+              </v-row>
+            </v-container>
+          </v-card-text>
         </v-card>
       </v-col>
       <v-col class="hidden-sm-and-down pa-0 ma-0" xs="12" sm="6" md="6" lg="5" xl="5">
@@ -243,6 +264,14 @@ export default {
       } else {
         return "null";
       }
+    },
+    currentTemp(temp) {
+      let tempLen = temp.length;
+      // console.log(this.awsData.data.temperature[tempLen-1]);
+      return temp[tempLen - 1];
+    },
+    windDecima(windSpeed){
+      return windSpeed.toFixed(2)
     }
   },
   computed: {

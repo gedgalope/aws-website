@@ -1,10 +1,10 @@
 <script>
 import { Line, mixins } from "vue-chartjs";
 const { reactiveProp } = mixins;
-
-var image = new Image();
-image.src =
-  "http://www.addu.edu.ph/wp-content/uploads/2015/05/00-OFFICIAL-AdDU-Seal-500px-300x300.jpg";
+import image from '../../../assets/AdduSeal.png';
+// var image = new Image();
+// image.src =
+//   "http://www.addu.edu.ph/wp-content/uploads/2015/05/00-OFFICIAL-AdDU-Seal-500px-300x300.jpg";
 
 export default {
   name: "line-chart",

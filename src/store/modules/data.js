@@ -1,3 +1,7 @@
+import galope from '../../assets/galope.jpg'
+import duro from '../../assets/duro.jpg'
+
+
 const state = {
   awsData: [
     {
@@ -102,29 +106,29 @@ const state = {
       name: 'Engr. Josef Rene Villanueva',
       position: 'Lead Researcher',
       gender: 'male',
-      social: { fb: "https://facebook.com", twitter: null, email: "josefrene@gmail.com" },
+      social: { fb: "https://www.facebook.com/josef.r.villanueva", twitter: null, email: "jrvillanueva22@gmail.com" },
       imgURL: 'https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
       name: 'Engr. Nathaniel Duro',
       position: 'Asst. Lead Researcher',
       gender: 'male',
-      social: { fb: "https://facebook.com", twitter: null, email: "nathaniel@gmail.com" },
-      imgURL: 'https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+      social: { fb: "https://www.facebook.com/nathanielduro", twitter: null, email: "nathanielduro@gmail.com" },
+      imgURL: duro
     },
     {
       name: 'Engr. Arby Christy Mascariñas',
       position: 'Lead Programmer',
       gender: 'female',
-      social: { fb: "https://facebook.com", twitter: null, email: "iamArby@gmail.com" },
+      social: { fb: "https://www.facebook.com/arbychristy", twitter: null, email: "arby.mascarinas@gmail.com" },
       imgURL: 'https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
       name: 'Engr. Gabriel Earl Galope',
       position: 'Frontend Developer',
       gender: 'male',
-      social: { fb: "https://facebook.com", twitter: 'https://twitter.com', email: "gedgalope@gmail.com" },
-      imgURL: 'https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+      social: { fb: "https://www.facebook.com/earl.galope", twitter: 'https://twitter.com/hukplanupu', email: "gedgalope@gmail.com" },
+      imgURL: galope
     }
 
   ]
@@ -141,7 +145,7 @@ const getters = {
     return state.awsDummy.map(data => data.coordinates)
   },
   getData: state => state.awsDummy,
-  getMembers: state => state.awsDummyPeople
+  getMembers: state => state.awsDummyPeople,
 
 }
 const actions = {
